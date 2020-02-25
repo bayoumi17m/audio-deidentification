@@ -1,0 +1,2 @@
+[flake8]
+ignore = E203,D401,RST213,RST210,W503,RST304
