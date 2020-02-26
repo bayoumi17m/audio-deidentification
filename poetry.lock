@@ -109,10 +109,10 @@ description = "The AWS SDK for Python"
 name = "boto3"
 optional = false
 python-versions = "*"
-version = "1.12.6"
+version = "1.12.7"
 
 [package.dependencies]
-botocore = ">=1.15.6,<1.16.0"
+botocore = ">=1.15.7,<1.16.0"
 jmespath = ">=0.7.1,<1.0.0"
 s3transfer = ">=0.3.0,<0.4.0"
 
@@ -122,7 +122,7 @@ description = "Low-level, data-driven core of boto 3."
 name = "botocore"
 optional = false
 python-versions = "*"
-version = "1.15.6"
+version = "1.15.7"
 
 [package.dependencies]
 docutils = ">=0.10,<0.16"
@@ -844,6 +844,14 @@ version = "5.0.2"
 snowballstemmer = "*"
 
 [[package]]
+category = "main"
+description = "Manipulate audio with an simple and easy high level interface"
+name = "pydub"
+optional = false
+python-versions = "*"
+version = "0.23.1"
+
+[[package]]
 category = "dev"
 description = "passive checker of Python programs"
 name = "pyflakes"
@@ -1448,7 +1456,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 doc = []
 
 [metadata]
-content-hash = "e9621b7f160b2130f4da04112f3010469c167024c6ce11e6f1d92a9226d3385f"
+content-hash = "2636599affd0b4bc3aa61e5349f60bb9c1c273513964468b9615b5b00038c16f"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -1489,12 +1497,11 @@ black = [
     {file = "black-18.9b0.tar.gz", hash = "sha256:e030a9a28f542debc08acceb273f228ac422798e5215ba2a791a6ddeaaca22a5"},
 ]
 boto3 = [
-    {file = "boto3-1.12.6-py2.py3-none-any.whl", hash = "sha256:74fddd07d319b85f9f3c56bad8ccb5a410bcc7eaab1a90fb7f5952fde068b200"},
-    {file = "boto3-1.12.6.tar.gz", hash = "sha256:02754cf029d2a8ce8f76d21fecd719ad31c7340b9ea0fd5ffa3edfaf54fa8fa4"},
+    {file = "boto3-1.12.7.tar.gz", hash = "sha256:5a97a13777a83fcfddff34a7ca0528ec99a65b1c76113e9d517a6d1791fb82a7"},
 ]
 botocore = [
-    {file = "botocore-1.15.6-py2.py3-none-any.whl", hash = "sha256:cfb27bdf426b272d2bb336785eacb4860d8ba936ea9cc19f35fdab37f1eaa71e"},
-    {file = "botocore-1.15.6.tar.gz", hash = "sha256:3319562f183f760f18f186914fc753f6a9c76c5783ba902fe75a934dd140bad8"},
+    {file = "botocore-1.15.7-py2.py3-none-any.whl", hash = "sha256:00bcc6375d331cff8b66430d4979eaa26cb22dac842778d98bb827f31671162d"},
+    {file = "botocore-1.15.7.tar.gz", hash = "sha256:6874d7117c8266076e5038475e0970bd90f315f0de825be48e71f9c5957b1927"},
 ]
 cached-property = [
     {file = "cached-property-1.5.1.tar.gz", hash = "sha256:9217a59f14a5682da7c4b8829deadbfc194ac22e9908ccf7c8820234e80a1504"},
@@ -1929,6 +1936,10 @@ pycparser = [
 pydocstyle = [
     {file = "pydocstyle-5.0.2-py3-none-any.whl", hash = "sha256:da7831660b7355307b32778c4a0dbfb137d89254ef31a2b2978f50fc0b4d7586"},
     {file = "pydocstyle-5.0.2.tar.gz", hash = "sha256:f4f5d210610c2d153fae39093d44224c17429e2ad7da12a8b419aba5c2f614b5"},
+]
+pydub = [
+    {file = "pydub-0.23.1-py2.py3-none-any.whl", hash = "sha256:d29901a486fb421c5d7b0f3d5d3a60527179204d8ffb20e74e1ae81c17e81b46"},
+    {file = "pydub-0.23.1.tar.gz", hash = "sha256:c362fa02da1eebd1d08bd47aa9b0102582dff7ca2269dbe9e043d228a0c1ea93"},
 ]
 pyflakes = [
     {file = "pyflakes-2.1.1-py2.py3-none-any.whl", hash = "sha256:17dbeb2e3f4d772725c777fabc446d5634d1038f234e77343108ce445ea69ce0"},

@@ -10,6 +10,9 @@ ASR/*.json
 NER/out_large/
 NER/large.zip
 NER/test_ner.py
+NER/*.json
+REDACT/*.json
+*/*.wav
 
 # C extensions
 *.so

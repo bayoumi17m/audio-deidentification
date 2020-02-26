@@ -1,9 +1,9 @@
 """Uploading audio files to an S3 bucket on AWS."""
 import logging
-import boto3
-from botocore.exceptions import ClientError
 
+import boto3
 import config
+from botocore.exceptions import ClientError
 
 
 def upload_file(file_name, bucket, object_name=None):
@@ -20,14 +20,15 @@ def upload_file(file_name, bucket, object_name=None):
     """
     if object_name is None:
         object_name = file_name
-    
+
     # Upload the file
-    s3_client = boto3.client("s3",
+    s3_client = boto3.client(
+        "s3",
         aws_access_key_id=config.AWS_ACCESS_KEY_ID,
-        aws_secret_access_key=config.AWS_SECRET_ACCESS_KEY
+        aws_secret_access_key=config.AWS_SECRET_ACCESS_KEY,
     )
     try:
-        response = s3_client.upload_file(file_name, bucket, object_name)
+        s3_client.upload_file(file_name, bucket, object_name)
     except ClientError as e:
         logging.error(e)
         return False
