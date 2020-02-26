@@ -22,9 +22,9 @@ def upload_file(file_name, bucket, object_name=None):
         object_name = file_name
     
     # Upload the file
-    s3_client boto3.client("s3",
+    s3_client = boto3.client("s3",
         aws_access_key_id=config.AWS_ACCESS_KEY_ID,
-        config.AWS_SECRET_ACCESS_KEY
+        aws_secret_access_key=config.AWS_SECRET_ACCESS_KEY
     )
     try:
         response = s3_client.upload_file(file_name, bucket, object_name)

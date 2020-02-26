@@ -6,6 +6,10 @@ __pycache__/
 # secrets
 ASR/config.py
 ASR/samples/*.wav
+ASR/*.json
+NER/out_large/
+NER/large.zip
+NER/test_ner.py
 
 # C extensions
 *.so
