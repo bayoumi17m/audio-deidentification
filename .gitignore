@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # secrets
-ASR/config.py
+*/config.py
 ASR/samples/*.wav
 ASR/*.json
 NER/out_large/
