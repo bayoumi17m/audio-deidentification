@@ -1,0 +1,57 @@
+openapi: 3.0.0
+info:
+  version: "0.0.1"
+  title: piiredaction
+
+servers:
+  - url: http://localhost:5000/
+
+paths:
+  /redaction:
+    post:
+      summary: Redact audio + text and put them in an S3 bucket
+      operationId: app.redaction
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/redactjob'
+      responses:
+        200:
+          description: Job successfully performed
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Success
+        500:
+          description: Error in the server during processing
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Error
+
+components:
+  schemas:
+    redactjob:
+      title: Redaction Job
+      type: object
+      properties:
+        job_name:
+          type: string
+          description: The name of the job to be performed.
+        input_bucket_name:
+          type: string
+          description: Name of the S3 bucket the audio is stored in.
+        input_s3_path:
+          tyoe: string
+          description: Path within the S3 bucket.
+        output_bucket_name: Name of the S3 bucket to store the output in.
+          type: string
+          description: 
+      required:
+        - job_name
+        - input_bucket_name
+        - input_s3_path
+        - output_bucket_name

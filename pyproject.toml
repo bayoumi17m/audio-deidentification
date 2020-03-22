@@ -18,6 +18,7 @@ nltk = "^3.4.5"
 flask = "^1.1.1"
 flask-cors = "^3.0.8"
 pydub = "^0.23.1"
+connexion = "^2.6.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.3"
@@ -40,7 +41,7 @@ pallets_sphinx_themes = "^1.2.3"
 sphinxcontrib-openapi = "^0.6.0"
 keyring = "^21.0.0"
 artifacts-keyring = "^0.2.8-rc.0"
-connexion = {extras = ["swagger-ui"], version = "^2.5.1"}
+connexion = {extras = ["swagger-ui"], version = "^2.6.0"}
 tox = "^3.14.3"
 
 [tool.poetry.extras]
