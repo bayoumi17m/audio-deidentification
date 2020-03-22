@@ -8,16 +8,16 @@ import urllib
 import boto3
 
 
-try:
-    import config
-except ImportError:
-    import ASR.config as config
+# try:
+#     import config
+# except ImportError:
+#     import ASR.config as config
 
-AWS_ACCESS_KEY_ID = config.AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY = config.AWS_SECRET_ACCESS_KEY
+# AWS_ACCESS_KEY_ID = config.AWS_ACCESS_KEY_ID
+# AWS_SECRET_ACCESS_KEY = config.AWS_SECRET_ACCESS_KEY
 
 
-def transcribe_job(job_name, job_uri):
+def transcribe_job(job_name, job_uri, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY):
     """Transcribe an audio file fetching text and timestamps.
 
     :param job_name: name of the transcription job

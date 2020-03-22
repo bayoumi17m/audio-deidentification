@@ -13,12 +13,12 @@ Deidentifying audio files - a new name entity recognition task
     1. [Project Structure](#project-structure)
     1. [Backend](#backend)
 1. [System Design](#system-design)
-1. [Testing](#testing)
+<!-- 1. [Testing](#testing)
     1. [The Importance Of Automation](#the-importance-of-automation)
     1. [Testing Strategy](#testing-strategy)
-    1. [Unit Testing](#unit-testing)
+    1. [Unit Testing](#unit-testing) -->
 1. [Deployment](#deployment)
-    1. [Kubernetes](#kubernetes)
+    <!-- 1. [Kubernetes](#kubernetes) -->
 1. [Contributing](#contributing)
 1. [Author](#author)
 1. [License](#license)
@@ -42,8 +42,12 @@ Describe structure of project in terms of generic folders and poetry (and other 
 
 ### Backend
 
+```bash
+curl --header "Content-Type: application/json" --request POST --data '{"job_name": "job_id_name", "input_bucket_name": "input_bucket_name", "input_s3_path": "s3_object_name", "output_bucket_name": "output_bucket_name"}' -s -w  "%{time_starttransfer}\n" http://0.0.0.0:5000/redaction
+```
+
 ## System Design
-## Testing
+<!-- ## Testing
 
 ### The Importance Of Automation
 SnapBee Figure Extraction is maintained by a small team of talented software engineers studying at Cornell under Cornell Data Science as a side project. The team wants to deliver new features faster without sacrificing its quality. Testing ever-increasing amount of features manually soon becomes impossible — unless we want to spend all our time with manual, repetitive work instead of delivering working features.
@@ -93,7 +97,7 @@ A automated test method should be composed of 3As: Arrange, Act, and Assert.
   of the test. The data used in a test should not depend on the environment
   in which the test is running.
 - [A]ct: Invoke the actual method under test.
-- [A]ssert: A test method should test for a single logical outcome.
+- [A]ssert: A test method should test for a single logical outcome. -->
 
 ## Deployment
 TBD

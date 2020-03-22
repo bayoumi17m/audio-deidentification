@@ -1,5 +1,7 @@
 """Audio Redaction taking in audio file, transcript, and NER."""
 
+import json
+
 from pydub import AudioSegment
 
 
@@ -30,7 +32,8 @@ def audio_redaction(audio_path, asr_output, ner_output):
     items = []
 
     for ner_step, asr_step in zip(ner_output, timestamped_tokens):
-        if "-" in ner_step["tag"]:
+        if "-" in ner_step["tag"] and asr_step["type"] == "pronunciation":
+            # print("JSON: {}\nTAG: {}".format(json.dumps(asr_step, indent=4), ner_step["tag"]))
             start_ms = int(float(asr_step["start_time"]) * 1000)
             end_ms = int(float(asr_step["end_time"]) * 1000)
             audio = (
@@ -38,6 +41,11 @@ def audio_redaction(audio_path, asr_output, ner_output):
                 + (AudioSegment.silent(duration=end_ms - start_ms))
                 + audio[end_ms + 1 :]
             )
+
+            transcript += " " + "REDACTED"
+
+            asr_step["alternatives"] = [{"confidence": 0.9121, "content": "REDACTED"}]
+            items.append(asr_step)
         else:
             if asr_step["type"] == "pronunciation":
                 transcript += " " + asr_step["alternatives"][0]["content"]
