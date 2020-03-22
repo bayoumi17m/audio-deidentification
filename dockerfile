@@ -5,6 +5,9 @@ ENV PIP_DEFAULT_TIMEOUT=100 \
     PIP_NO_CACHE_DIR=1 \
     POETRY_VERSION=1.0.2
 
+RUN apt-get update -y
+RUN apt-get install -y ffmpeg libav-tools libavcodec-extra
+
 RUN pip install -U pip
 RUN pip install "poetry==$POETRY_VERSION"
 
