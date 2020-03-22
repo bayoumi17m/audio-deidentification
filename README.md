@@ -107,9 +107,12 @@ TBD
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
 of conduct, and the process for submitting pull requests to us.
 
-## Author
+## Authors
 
-Magd Bayoumi - *Initial work* - []()
+Magd Bayoumi - *Initial work* - [bayoumi17m](https://github.com/bayoumi17m)
+Phillip Si - - []()
+Oscar So - - [oscarso2000](https://github.com/oscarso2000)
+Nikhil Saggi - - [nikhilsaggi](https://github.com/nikhilsaggi)
 
-As the tech lead of SnapBee Figure Extraction, I am responsible for the overall planning, execution
-and success of complex software solutions to meet users' needs.
+<!-- As the tech lead of SnapBee Figure Extraction, I am responsible for the overall planning, execution
+and success of complex software solutions to meet users' needs. -->
